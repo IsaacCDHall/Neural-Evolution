@@ -18,7 +18,7 @@ function GATests() {
         }
       `}</style>
       <h1>Genetic Algorithms</h1>
-      <h3><Link className='link-class' to="/">Home</Link> | <Link className='link-class' to="/data">Data</Link></h3>
+      <h3><Link className='link-class' to="/data">Data</Link></h3>
     </div>
   );
 }

@@ -29,7 +29,7 @@ export default function ToBe(p) {
     population.calcFitness();
     p.displayInfo();
 
-    // If we found the target phrase, stop
+    // If target phrase, stop
     if (population.finished) {
       p.textSize(32);
       p.text(p.nf((p.millis() / 1000.0), 0, 2) + " secs", 20, 225);
