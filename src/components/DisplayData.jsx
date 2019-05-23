@@ -2,10 +2,10 @@ import React from 'react';
 
 
 function DisplayData(props) {
-
   function formatDecimals(flt) {
     var splitStr = flt.toString().split('.'),
       whole = (flt * 100) | 0;
+      console.log(props);
 
     if (splitStr.length > 1 && splitStr[1].length > 2) {
       return splitStr[1][2] > 4 ? (whole + 1) / 100 : whole / 100;

@@ -15,7 +15,7 @@ class App extends Component {
         background: #314455;
         color: #F39E02;
         text-align: center;
-        font-family: 'Atomic Age', cursive;
+        font-family: 'math', sans-serif;
       }
     `}</style>
         <Header />

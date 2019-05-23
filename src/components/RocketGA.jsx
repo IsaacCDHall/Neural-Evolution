@@ -37,7 +37,7 @@ export default function RocketGA(p) {
     h: 200
   };
   let completed = false;
-  
+
 
   p.setup = function () {
     p.createCanvas(gVars.CANVAS_WIDTH, gVars.CANVAS_HEIGHT);
@@ -63,7 +63,7 @@ export default function RocketGA(p) {
   p.performSelection = function () {
     let maxFit = 0;
     matingPool = [];
-    console.log("iteration", gVars.GENERATION)
+    console.log("iter", gVars.GENERATION)
     for (let i = 0; i < gVars.ROCKETS.length; i++) {
       gVars.ROCKETS[i].calcFitness(target, gVars.COUNT);
       if (gVars.ROCKETS[i].fitness > maxFit) {
@@ -147,7 +147,7 @@ export default function RocketGA(p) {
         lifeP.html('Lifespan: ' + gVars.COUNT + ' / ' + gVars.LIFESPAN);
       }
     }
-    if (completed) { 
+    if (completed) {
       gameOver.html('End of Test!!')
     }
   };
