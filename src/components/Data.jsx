@@ -52,7 +52,7 @@ class Data extends React.Component {
               background: #2BA84A;
             }
             .MonkeyRocket:active {
-              color: black;
+              color: red;
             }
 
 
