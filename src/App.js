@@ -12,10 +12,14 @@ class App extends Component {
     <div className="App">
     <style jsx>{`
       body {
-        background: #314455;
-        color: #F39E02;
+        background: #040F0F no-repeat center center fixed;
+        color: #FCFFFC;
         text-align: center;
         font-family: 'math', sans-serif;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
       }
     `}</style>
         <Header />

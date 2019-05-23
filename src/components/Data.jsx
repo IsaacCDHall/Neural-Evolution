@@ -34,63 +34,59 @@ class Data extends React.Component {
         <style jsx>{`
 
             .container {
-              border: 5px solid green;
+              max-width: 90%;
+              margin: auto;
             }
             .MonkeyRocket {
+              display: inline-block;
               cursor: pointer;
-              color: white;
-              background: #9D5A63;
-              width: 150px;
+              color: #2D3A3A;
+              background: #2BA84A;
+              width: 200px;
               padding: 5px 20px 5px 20px;
               margin: 0 30px 0px 30px;
-              display: inline-block;
-              text-shadow: black 2px 2px 0px;
+              font-size: 36px;
             }
             .MonkeyRocket:hover {
               text-decoration: underline;
               font-weight: bold;
-              color: #F39E02;
-              background: rgb(100, 78, 91);
+              color: #FCFFFC;
+              background: rgb(100, 155, 91);
             }
             .MonkeyRocket:active {
               color: pink;
             }
 
-            .row {
-              border: 40px solid pink;
-
-            }
 
 
 
           `}</style>
-
-
-
-        <div className='row'>
+        <div>
           <div className='MonkeyRocket' onClick={() => this.handleTestClick('RocketGA')}>
 
             Rockets
 
           </div>
 
-        <div className='MonkeyRocket' onClick={() => this.handleTestClick('ToBe')}>
+          <div className='MonkeyRocket' onClick={() => this.handleTestClick('ToBe')}>
 
             Monkeys
 
 
+          </div>
+
         </div>
+        <br/>
+        <br/>
 
-          <div className='col'>
-            <div>
-
+        <div className='col'>
+          <div>
             {this.state.currentTest ? <P5Wrapper sketch={tests[currentTest]} handleIterations={this.handleIterations} /> : null}
-            </div>
           </div>
-          <div className='col'>
-            <DisplayData iterations={iterations} />
-            <ChangeTest />
-          </div>
+        </div>
+        <div className='col'>
+          <DisplayData iterations={iterations} />
+          <ChangeTest />
         </div>
       </div>
     );

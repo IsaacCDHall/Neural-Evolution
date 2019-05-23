@@ -41,7 +41,7 @@ export class ToBeDNA {
     }
     this.fitness = score / target.length;
     // increases probability for best genes to pass on by ^squaring results
-    this.fitness = p.pow(this.fitness, 10);
+    this.fitness = p.pow(this.fitness, 2);
   }
 
   // Crossover

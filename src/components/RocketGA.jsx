@@ -2,10 +2,10 @@ import { Rocket } from '../models/Rockets/rocket';
 import { RocketIteration } from '../models/Iterations/iterations';
 
 export let GlobbalSketchVest = {
-  CANVAS_HEIGHT: 400,
-  CANVAS_WIDTH: 800,
+  CANVAS_HEIGHT: 500,
+  CANVAS_WIDTH: 900,
   POPULATION_SIZE: 25,
-  LIFESPAN: 300,
+  LIFESPAN: 400,
   COUNT: 0,
   ROCKETS: [],
   GENERATION: 1,
@@ -26,17 +26,18 @@ export default function RocketGA(p) {
   let lifeP, generationP, gameOver;
   GlobbalSketchVest.restart();
   let gVars = Object.assign({}, GlobbalSketchVest);
-  let target = p.createVector(50, 50);
+  let target = p.createVector(800, 100);
   let matingPool = [];
   let totalDist = 0;
   let recievedProps;
   let rect = {
-    x: 350,
-    y: 100,
-    w: 20,
-    h: 200
+    x: 505,
+    y: 250,
+    w: 300,
+    h: 30
   };
   let completed = false;
+  let angle = 0;
 
 
   p.setup = function () {
@@ -47,6 +48,7 @@ export default function RocketGA(p) {
     gameOver = p.createP(null).addClass('canvas-line').parent(containerDiv);
     p.createFirstPopulation();
     p.updateStats();
+    p.angleMode(p.DEGREES);
   };
 
   p.myCustomRedrawAccordingToNewPropsHandler = function (props) {
@@ -125,11 +127,23 @@ export default function RocketGA(p) {
   p.draw = function () {
     if (!completed) {
       for (let a = 0; a < 2; a++) {
-        p.background(100, 78, 91);
-        p.fill(105, 181, 163);
-        p.rect(rect.x, rect.y, rect.w, rect.h);
-        p.ellipse(target.x, target.y, 25, 25);
-        p.fill(243, 158, 2);
+        p.background(4,15,15, 4);
+
+
+
+        p.translate(0, -2.5)
+        p.rotate(angle);
+        p.fill(255,0,255);
+        p.rect(rect.x, rect.y, rect.w, rect.h );
+
+
+
+
+
+
+
+        p.ellipse(target.x, target.y, 30, 30);
+        p.fill(0,255,0, 80);
         gVars.COUNT++;
         if (gVars.COUNT >= gVars.LIFESPAN) {
           p.performSelection();
@@ -145,10 +159,12 @@ export default function RocketGA(p) {
           gVars.ROCKETS[i].show();
         }
         lifeP.html('Lifespan: ' + gVars.COUNT + ' / ' + gVars.LIFESPAN);
+        p.fill(0,0,0, 20);
+        p.stroke('rgba(0,255,0,0.25)');
       }
     }
     if (completed) {
-      gameOver.html('End of Test!!')
+      gameOver.html('game over')
     }
   };
 }
