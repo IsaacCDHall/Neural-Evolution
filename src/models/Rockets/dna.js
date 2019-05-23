@@ -17,11 +17,8 @@ export class DNA {
 
   crossOver(otherDNA) {
     let newGenes = [];
-    // let mid = Math.floor(Math.random() * this.genes.length);
-    let mid = Math.random();
     for (let i = 0; i < this.genes.length; i++) {
       if (Math.random() > .50) {
-      // if (i > mid) {
         newGenes[i] = this.genes[i];
       } else {
         newGenes[i] = otherDNA.genes[i];
@@ -32,8 +29,8 @@ export class DNA {
 
   mutation() {
     for (let i = 0; i < this.genes.length; i++) {
-      if (Math.random() < 0.0008) {
-        console.log("                                                                  mutated");
+      if (Math.random() < 0.0002) {
+        console.log("mutated");
         this.genes[i] = this.p.createVector(this.p.random(-1, 1), this.p.random(-1, 1));
         this.genes[i].setMag(0.2);
       }

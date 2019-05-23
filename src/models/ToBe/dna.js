@@ -1,16 +1,8 @@
-// The Nature of Code
-// Daniel Shiffman
-// http://natureofcode.com
 
-// Genetic Algorithm, Evolving Shakespeare
-
-// A class to describe a psuedo-DNA, i.e. genotype
-//   Here, a virtual organism's DNA is an array of character.
-//   Functionality:
-//      -- convert DNA into a string
-//      -- calculate DNA's "fitness"
-//      -- mate DNA with another set of DNA
-//      -- mutate DNA
+//      variation -- setup -> convert DNA into a string
+//      selection -- fitness function -> calculate DNA's "fitness"
+//      heredity  -- mate DNA with another set of DNA
+//                -- crossover/mutate DNA
 
 
 export class ToBeDNA {
@@ -20,8 +12,7 @@ export class ToBeDNA {
     this.genes = [];
     for (let i = 0; i < targetLength; i++) {
       this.genes[i] = this.possible[Math.floor(Math.random() * this.possible.length)];
-      // console.log(this.genes);
-      // Pick from range of chars
+    
     }
     this.fitness= 0;
   }

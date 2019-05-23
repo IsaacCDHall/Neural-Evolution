@@ -1,9 +1,8 @@
 import React from 'react';
 import DisplayData from './DisplayData';
-import RocketGA, { GlobalSketchVars } from './RocketGA';
+import RocketGA from './RocketGA';
 import ToBe from './ToBe';
 import P5Wrapper from 'react-p5-wrapper';
-import ChangeTest from './ChangeTest';
 
 class Data extends React.Component {
   constructor(props) {
@@ -41,20 +40,19 @@ class Data extends React.Component {
               display: inline-block;
               cursor: pointer;
               color: #2D3A3A;
-              background: #2BA84A;
+              background: #248232;
               width: 200px;
               padding: 5px 20px 5px 20px;
               margin: 0 30px 0px 30px;
               font-size: 36px;
+              transition: .6s;
             }
             .MonkeyRocket:hover {
-              text-decoration: underline;
-              font-weight: bold;
               color: #FCFFFC;
-              background: rgb(100, 155, 91);
+              background: #2BA84A;
             }
             .MonkeyRocket:active {
-              color: pink;
+              color: black;
             }
 
 
@@ -86,7 +84,6 @@ class Data extends React.Component {
         </div>
         <div className='col'>
           <DisplayData iterations={iterations} />
-          <ChangeTest />
         </div>
       </div>
     );

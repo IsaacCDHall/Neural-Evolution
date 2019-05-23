@@ -5,7 +5,7 @@ export let GlobbalSketchVest = {
   CANVAS_HEIGHT: 500,
   CANVAS_WIDTH: 900,
   POPULATION_SIZE: 25,
-  LIFESPAN: 400,
+  LIFESPAN: 350,
   COUNT: 0,
   ROCKETS: [],
   GENERATION: 1,
@@ -26,12 +26,12 @@ export default function RocketGA(p) {
   let lifeP, generationP, gameOver;
   GlobbalSketchVest.restart();
   let gVars = Object.assign({}, GlobbalSketchVest);
-  let target = p.createVector(800, 100);
+  let target = p.createVector(650, 150);
   let matingPool = [];
   let totalDist = 0;
   let recievedProps;
   let rect = {
-    x: 505,
+    x: 445,
     y: 250,
     w: 300,
     h: 30
@@ -131,8 +131,7 @@ export default function RocketGA(p) {
 
 
 
-        p.translate(0, -2.5)
-        p.rotate(angle);
+
         p.fill(255,0,255);
         p.rect(rect.x, rect.y, rect.w, rect.h );
 
@@ -141,8 +140,9 @@ export default function RocketGA(p) {
 
 
 
-
+        p.translate(0, -1.5)
         p.ellipse(target.x, target.y, 30, 30);
+
         p.fill(0,255,0, 80);
         gVars.COUNT++;
         if (gVars.COUNT >= gVars.LIFESPAN) {
@@ -158,13 +158,15 @@ export default function RocketGA(p) {
           gVars.ROCKETS[i].update(gVars.COUNT, target, rect);
           gVars.ROCKETS[i].show();
         }
-        lifeP.html('Lifespan: ' + gVars.COUNT + ' / ' + gVars.LIFESPAN);
-        p.fill(0,0,0, 20);
-        p.stroke('rgba(0,255,0,0.25)');
+
+        let lifeExpect =  Math.round((gVars.COUNT / gVars.LIFESPAN) * 10);
+
+        lifeP.html('Life Time Completion: ' + lifeExpect + '/10');
+
       }
     }
     if (completed) {
-      gameOver.html('game over')
+      gameOver.html('So.. How about that Job, huh?')
     }
   };
 }
