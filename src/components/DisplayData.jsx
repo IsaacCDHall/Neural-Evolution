@@ -2,57 +2,69 @@ import React from 'react';
 
 
 function DisplayData(props) {
-  function formatDecimals(flt) {
-    var splitStr = flt.toString().split('.'),
-      whole = (flt * 100) | 0;
-      console.log(props);
-
-    if (splitStr.length > 1 && splitStr[1].length > 2) {
-      return splitStr[1][2] > 4 ? (whole + 1) / 100 : whole / 100;
-    } else {
-      return flt;
-    }
+  console.log(props);
+  function percentCalc(x, y){
+    return Math.round((x * y / y) * 100);
   }
   return (
     <div>
       <style jsx>{`
+          .tableSpace{
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            width: 100vw;
+            max-width: 100%;
+          }
         th {
-          text-decoration: underline;
-          border: 1px solid #F39E02;
+          padding: 15px;
+          font-size: 30px;
+
         }
         table {
-          display: block;
-          height: 400px;
+          text-align: center;
+          width: 35%;
           // overflow-y: scroll;
-          margin: 0px auto;
+          margin:auto;
+        }
+        tr{
+          border: 1px solid green;
+
+        }
+        td{
+          font-size: 36px;
+
         }
       `}</style>
-      {props.iterations.length > 0 ?
-        <table className="table">
-          <thead>
-            <tr>
-              <th scope="col">Gen#</th>
-              <th scope="col">Qty</th>
-              <th scope="col">Fitness</th>
-              <th scope="col">NoComplete</th>
-              <th scope="col">Complete</th>
-              <th scope="col">Crashed</th>
-            </tr>
-          </thead>
-          <tbody>
-            {props.iterations.map((iteration) => (
-              <tr key={iteration.generation}>
-                <td>{iteration.generation}</td>
-                <td>{iteration.totalPop}</td>
-                <td>{formatDecimals(iteration.averageFitness * 100 * iteration.totalPop)} / {iteration.totalPop * 100}</td>
-                <td>{iteration.totalNoComplete}</td>
-                <td>{iteration.totalCompleted}</td>
-                <td>{iteration.totalCrashed}</td>
+      <div className="tableSpace">
+        {props.iterations.length > 0 ?
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Gen#</th>
+                <th scope="col">Pop</th>
+                <th scope="col">Fitness</th>
+                <th scope="col">Complete</th>
+                <th scope="col">Crashed</th>
+                <th scope="col">DQ'd</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
-        : null}
+            </thead>
+            <tbody>
+
+              {props.iterations.map((iteration) => (
+                <tr key={iteration.generation}>
+                  <td>{iteration.generation}</td>
+                  <td>{iteration.totalPop}</td>
+                  <td>{percentCalc(iteration.averageFitness, iteration.totalPop) + '%'}</td>
+                  <td>{iteration.totalCompleted}</td>
+                  <td>{iteration.totalCrashed}</td>
+                  <td>{iteration.totalDQ}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          : null}
+      </div>
     </div>
   );
 }

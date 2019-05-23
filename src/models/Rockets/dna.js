@@ -32,10 +32,10 @@ export class DNA {
 
   mutation() {
     for (let i = 0; i < this.genes.length; i++) {
-      if (Math.random() < 0.001) {
+      if (Math.random() < 0.0008) {
         console.log("                                                                  mutated");
         this.genes[i] = this.p.createVector(this.p.random(-1, 1), this.p.random(-1, 1));
-        this.genes[i].setMag(0.2);        
+        this.genes[i].setMag(0.2);
       }
     }
   }

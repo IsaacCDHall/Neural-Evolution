@@ -4,7 +4,7 @@ export class RocketIteration {
     this.totalCrashed = totalCrashed;
     this.totalCompleted = totalCompleted;
     this.averageFitness = averageFitness;
-    this.totalNoComplete = this.totalPop - this.totalCompleted;
+    this.totalDQ = this.totalPop - this.totalCrashed - this.totalCompleted;
     this.generation = generation;
   }
 }

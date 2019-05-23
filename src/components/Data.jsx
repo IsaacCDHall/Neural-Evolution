@@ -32,40 +32,55 @@ class Data extends React.Component {
     return (
       <div className='container'>
         <style jsx>{`
-            .col {
-              display: inline-block;
+
+            .container {
+              border: 5px solid green;
             }
-            .test-class {
+            .MonkeyRocket {
               cursor: pointer;
               color: white;
               background: #9D5A63;
               width: 150px;
               padding: 5px 20px 5px 20px;
-              word-spacing: 50px;
               margin: 0 30px 0px 30px;
               display: inline-block;
               text-shadow: black 2px 2px 0px;
             }
-            .test-class:hover {
+            .MonkeyRocket:hover {
               text-decoration: underline;
               font-weight: bold;
               color: #F39E02;
               background: rgb(100, 78, 91);
             }
-            .test-link {
-              margin: 25px 25px 25px 25px;
-              width: 100%;
+            .MonkeyRocket:active {
+              color: pink;
             }
+
             .row {
-              // padding-left: 38px;
+              border: 40px solid pink;
 
             }
 
 
 
           `}</style>
+
+
+
         <div className='row'>
-          <h3 className='test-link'><span className='test-class' onClick={() => this.handleTestClick('RocketGA')}>Rockets</span><span className='test-class' onClick={() => this.handleTestClick('ToBe')}>ToBe</span></h3>
+          <div className='MonkeyRocket' onClick={() => this.handleTestClick('RocketGA')}>
+
+            Rockets
+
+          </div>
+
+        <div className='MonkeyRocket' onClick={() => this.handleTestClick('ToBe')}>
+
+            Monkeys
+
+
+        </div>
+
           <div className='col'>
             <div>
 
