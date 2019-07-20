@@ -28,6 +28,15 @@
   * 2 - 4pm Research use of fitness in GA in other applications.
   * 4 - 445pm Continue with researching using Daniel Shiffman's *Nature of Code* book.
   * It's looking good! (better)
+  
+###### July 19th
+  * 8-11am General Discovery, Neural Networks 
+  * 11-1205 Look for ways in which I can improve upon my current GA's
+  * 12am-1:10 lunch
+  * 1:10pm Study implementation of NN's in other javascript projects
+  * 2 - 4pm Determine final project idea which will be a blend of many different kinds of projects I've seen
+  * 4 - 455pm Continue with researching using Chapter 10 of Daniel Shiffman's *Nature of Code* book
+
 
 ### Goals
 
@@ -38,8 +47,10 @@
 
  __MVP :__
 
-         - [ ] Infinite monkey theorem
-         - [ ] Rockets
+         - [x] Infinite monkey theorem
+         - [x] Rockets
+         - [ ] Survival Based game?
+         
 
 
  __Stretch Goals :__
