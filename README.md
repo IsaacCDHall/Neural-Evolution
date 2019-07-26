@@ -36,6 +36,15 @@
   * 1:10pm Study implementation of NN's in other javascript projects
   * 2 - 4pm Determine final project idea which will be a blend of many different kinds of projects I've seen
   * 4 - 455pm Continue with researching using Chapter 10 of Daniel Shiffman's *Nature of Code* book
+  
+ ######  July 26
+  * 8-11am Spent the first part of today looking for ways in which I could implement python to an exisiting react site. This way, I could import libraries such as Tensor Flow (The js version is apparently very lackluster with little documentation)
+  * 11-12am Attempt to code in python but end up spending most of this time reverting changes after it does not work
+  * 12am-1:10pm Food Time
+  * 1:10 - 230pm React Redux Flask project, forked this to my github and begin dissecting/playing around in the environment
+  * 2:30 - 3:30pm Dive into tensor flow documentation
+  * 330 - 430pm Pytorch Documentation
+  * 4:30 - 5 Update Readme with progress here. Honestly, this is only the beginning of the journey still
 
 
 ### Goals
