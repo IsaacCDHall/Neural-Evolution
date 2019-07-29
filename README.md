@@ -45,6 +45,9 @@
   * 2:30 - 3:30pm Dive into tensor flow documentation
   * 330 - 430pm Pytorch Documentation
   * 4:30 - 5 Update Readme with progress here. Honestly, this is only the beginning of the journey still
+  
+###### July 29th
+  * Create Flappy bird in flappy directory. I will inject AI with the help of Neural Networks and Genetic Algorithms. Once this project is complete within it's quarantined directory, i will implement into the main code
 
 
 ### Goals
