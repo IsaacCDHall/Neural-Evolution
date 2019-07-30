@@ -4,6 +4,7 @@ export class Pipe {
         this.pos = pos;
         this.vel = p5.createVector(-3, 0);
         this.gap = gap;
+        this.text = '';
     }
     draw() {
         p5.push();
@@ -12,6 +13,7 @@ export class Pipe {
         var bot = this.bottomRect;
         p5.rect(top.x, top.y, top.w, top.h);
         p5.rect(bot.x, bot.y, bot.w, bot.h);
+        if(this.text) p5.text(this.text, bot.x+this.width+10, p5.height-10);
     }
     get topRect() {
         return {
