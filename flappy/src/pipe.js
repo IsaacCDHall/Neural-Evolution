@@ -2,13 +2,13 @@ export class Pipe {
     constructor(pos, gap = 100) {
         this.width = 100;
         this.pos = pos;
-        this.vel = p5.createVector(-3, 0);
-        this.gap = gap;
+        this.vel = p5.createVector(-5, 10);
+        this.gap = 200;
         this.text = '';
     }
     draw() {
         p5.push();
-        p5.fill(0, 192, 0);
+        p5.fill(0, 222, 0);
         var top = this.topRect;
         var bot = this.bottomRect;
         p5.rect(top.x, top.y, top.w, top.h);
@@ -32,6 +32,6 @@ export class Pipe {
         };
     }
     update() {
-        // this.pos.add(this.vel);
+        this.pos.add(this.vel);
     }
 }

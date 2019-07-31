@@ -13,7 +13,7 @@ export class Bird {
         this.lift = 5;
         this.player = false;
         this.pos = startPos.copy();
-        this.vel = p5.createVector(this.speed, 0); //p5.random(-1,1));
+        this.vel = p5.createVector(this.speed, 0);
         this.acc = p5.createVector(0, this.gravity);
         this.brain = new Brain(2, 4, 1);
         // var weights = this.brain.getWeights();
@@ -22,7 +22,7 @@ export class Bird {
     }
     reset() {
         this.pos = this.startPos.copy();
-        this.vel = p5.createVector(this.speed, 0); //p5.random(-1,1));
+        this.vel = p5.createVector(this.speed, 0);
         this.acc = p5.createVector(0, this.gravity);
         this.alive = true;
     }
@@ -52,6 +52,7 @@ export class Bird {
     update() {
         if (!this.alive)
             return;
+            //take off this.player to control all birds
         if (this.player && p5.keyIsDown(32))
             this.flap();
         this.vel.add(this.acc);
@@ -94,7 +95,11 @@ export class Bird {
     }
     calcFitness() {
         this.fitness = this.pos.x / p5.width;
-        this.fitness = Math.pow(this.fitness, 3);
+        // this is for improved effiency but less viewing pleasure
+        // this.fitness = Math.pow(this.fitness, this.fitness);
+
+        // reduced back to 2 instead of 4 to reduce frequency of gen 1 stars
+        this.fitness = Math.pow(this.fitness, 2)
         return this.fitness;
     }
 }

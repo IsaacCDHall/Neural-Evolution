@@ -21,7 +21,7 @@ export class Population {
             var b = this.randomWeighted();
             // console.log('nextGen: a=%o, b=%o', a,b);
             var dna = Dna.crossover(a.dna, b.dna);
-            dna.mutate(0.05, 0.1);
+            dna.mutate(0.5, 0.1);
             return dna;
         });
         this.createBirds();
