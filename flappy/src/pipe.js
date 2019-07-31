@@ -2,8 +2,8 @@ export class Pipe {
     constructor(pos, gap = 100) {
         this.width = 100;
         this.pos = pos;
-        this.vel = p5.createVector(-5, 10);
-        this.gap = 200;
+        this.vel = p5.createVector(-3, 0);
+        this.gap = gap;
         this.text = '';
     }
     draw() {

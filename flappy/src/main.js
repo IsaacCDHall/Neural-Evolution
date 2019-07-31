@@ -36,10 +36,10 @@ new P5((p5) => {
         player = new Bird(p5.createVector(25, p5.height / 2 + 50));
         player.player = true;
         // insert pipes
-        var spacing = 150;
+        var spacing = 300;
         for (var i = 0; i < 100; i++) {
             var x = 500 + i * spacing * 2;
-            // var gap = Math.max(50, 100-i*10);
+            var gap = Math.max(50, 100-i*10);
             var height = p5.height / 2 + Math.sin(Math.PI * i / 4) * p5.height / 4 + p5.random() * Math.min(p5.height / 4, i * 5);
             var pipe = new Pipe(p5.createVector(x, height), Math.max(100, 300 - i * 5));
             pipe.text = '#' + (i + 1);
@@ -91,8 +91,8 @@ new P5((p5) => {
             generation: pop.generation,
             birds: pop.size,
             alive: aliveBirds.length,
-            score: bestBird.pos.x,
-            best: pop.bestDist
+            score: Math.round(bestBird.pos.x / 100),
+            best: Math.round(pop.bestDist /100)
         };
         setStats(stats);
     };
