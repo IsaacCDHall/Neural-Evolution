@@ -28,15 +28,15 @@
   * 2 - 4pm Research use of fitness in GA in other applications.
   * 4 - 445pm Continue with researching using Daniel Shiffman's *Nature of Code* book.
   * It's looking good! (better)
-  
+
 ###### July 19th
-  * 8-11am General Discovery, Neural Networks 
+  * 8-11am General Discovery, Neural Networks
   * 11-1205 Look for ways in which I can improve upon my current GA's
   * 12am-1:10 lunch
   * 1:10pm Study implementation of NN's in other javascript projects
   * 2 - 4pm Determine final project idea which will be a blend of many different kinds of projects I've seen
   * 4 - 455pm Continue with researching using Chapter 10 of Daniel Shiffman's *Nature of Code* book
-  
+
  ######  July 26
   * 8-11am Spent the first part of today looking for ways in which I could implement python to an exisiting react site. This way, I could import libraries such as Tensor Flow (The js version is apparently very lackluster with little documentation)
   * 11-12am Attempt to code in python but end up spending most of this time reverting changes after it does not work
@@ -45,11 +45,19 @@
   * 2:30 - 3:30pm Dive into tensor flow documentation
   * 330 - 430pm Pytorch Documentation
   * 4:30 - 5 Update Readme with progress here. Honestly, this is only the beginning of the journey still
-  
+
 ###### July 29th
   * Create Flappy bird in flappy directory. I will inject AI with the help of Neural Networks and Genetic Algorithms. Once this project is complete within it's quarantined directory, i will implement into the main code
+###### July 30th
+  * Initial Neural Network implementation
+###### July 29th
+  * Bug fixes and performance optimization.
 
 
+
+### Known Bugs
+
+  * Increasing population crashes on restart
 ### Goals
 
  __Tasks :__
@@ -61,8 +69,9 @@
 
          - [x] Infinite monkey theorem
          - [x] Rockets
-         - [ ] Survival Based game?
-         
+         - [ ]~Survival Based game?~
+         - [x] Neural Evolution Through Flappy Bird
+
 
 
  __Stretch Goals :__
@@ -70,6 +79,7 @@
          - [ ] DRY-est CODE
          - [ ] Optimize using Pool Selection
          - [ ] Interactive Selection Project
+         - [ ] React State 
 
   __Audit Optimization :__
 
