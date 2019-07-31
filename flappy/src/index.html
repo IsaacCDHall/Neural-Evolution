@@ -1,11 +1,66 @@
+
 <html>
 <head>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+
 	<script src="/main.bundle.js"></script>
-	<style>
-		html,body {padding:0; margin:0;}
-	</style>
+	 <link rel="stylesheet" type="text/css" href="./index.css">
 </head>
-<body>
-</body>
+	<body>
+		<div class= "main">
+			<div id="canvas">
+			</div>
+			<div class= "container">
+				<div>
+					<h3>Generation</h3>
+					<p id="generation"></p>
+				</div>
+				<div>
+					<h3>Birds Alive</h3>
+					<p id="alive"></p>
+				</div>
+				<div>
+					<h3>Current Score</h3>
+					<p id="score"></p>
+				</div>
+				<div>
+					<h3>Best Score</h3>
+					<p id="bestScore"></p>
+				</div>
+				<div>
+					<label class=>Population Size</label>
+					<input type="number" min="1" max="1000" id="popSize">
+				</div>
+				<div>
+					<label class=>Mutation Frequency:</label>
+					<input type="number" min="0" max="1" step="0.05" id="mutRate">
+				</div>
+				<div>
+					<label class=>Mutation Amount:</label>
+					<input type="number" min="0" max="1" step="0.05" id="mutSize">
+				</div>
+				<div >
+					<button class="btn btn-success" id="pauseBtn">Pause</button>
+					<button class="btn btn-warning" id="restartBtn">Restart</button>
+				</div>
+
+				<div>
+					<label class=>Bird Speed:</label>
+					<input type="number" min="1" max="100" id="speed">
+				</div>
+				<div>
+					<label class=>Bird Gravity:</label>
+					<input type="number" min="0" max="10" step="0.1" id="gravity">
+				</div>
+				<div>
+					<label class=>Bird Lift:</label>
+					<input type="number" min="0" max="10" step="0.1" id="lift">
+				</div>
+
+			</div>
+
+		</div>
+
+	</body>
 </html>
