@@ -10,9 +10,9 @@ export default function ToBe(p) {
 
   p.setup = function () {
     p.createCanvas(gVars.CANVAS_WIDTH, gVars.CANVAS_HEIGHT);
-    target = "Hook me up with a job";
+    target = "Shakespearean Monkey Magic";
     mutationRate = 0.001;
-    maxPop = 300;
+    maxPop = 750;
 
     // Create a populationation with a target phrase, mutation rate, and populationation max
     population = new Population(p, target, mutationRate, maxPop);
