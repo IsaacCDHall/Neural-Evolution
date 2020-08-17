@@ -1,13 +1,30 @@
-# GeneticsVisual
+# Neural-Evolution
 
-1. [Description](#description)
+1. [Description](#Description)
+1. [Installation](#Installation)
+1. [Progress](#Progress)
 1. [Goals](#Goals)
 1. [Planning Mock-ups](#Planning)
 1. [Notes](#notes)
-1. [Installation](#Installation)
 1. [License](#license)
 
 ### Description
+Root Directory features Genetic algorithms tasked to solve for known soltions. The "FlappyBot" Folder continues on this concept with increased efficiency(Genetic Algorithm + Neural Networking ft. TensorFlow.js AKA neuroevolution of augmenting topologies(NEAT))
+
+### Installation
+
+1. Clone or download this repository
+2. `npm i` in terminalhttps://github.com/IsaacCDHall/Neural-Evolution/blob/master/README.md
+3. `npm run start`
+4. Visit http://localhost:3000/ in browser
+
+##### FlappyBot 
+5. In terminal again at the root directory, `cd FlappyBot`
+6. `npm i` in terminal
+7. `npm run start`
+8. Visit http://localhost:3001/ in browser
+
+### Progress
 
 ######  May 3rd
   * 8-10am General Discovery
@@ -99,12 +116,6 @@
 
 * notes go here
 
-### Installation
-
-1. Clone or download this repository as zip
-2. `npm i` in terminal
-3. `npm run start`
-4. Visit http://localhost:3000/ in browser
 
 
 ### License
