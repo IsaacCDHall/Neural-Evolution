@@ -1,5 +1,7 @@
 # Neural-Evolution
 
+ Feel free to visit the 2 parts of this project online [here](https://neuro-evolution-flappy.netlify.com/) and [here](https://evolutionvisualisation.netlify.app/)
+
 1. [Description](#Description)
 1. [Installation](#Installation)
 1. [Progress](#Progress)
@@ -13,12 +15,13 @@ Root Directory features Genetic algorithms tasked to solve for known soltions. T
 
 ### Installation
 
+#### [GA's](https://evolutionvisualisation.netlify.app/)
 1. Clone or download this repository
 2. `npm i` in terminalhttps://github.com/IsaacCDHall/Neural-Evolution/blob/master/README.md
 3. `npm run start`
 4. Visit http://localhost:3000/ in browser
 
-##### FlappyBot 
+##### [FlappyBot](https://neuro-evolution-flappy.netlify.com/)
 5. In terminal again at the root directory, `cd FlappyBot`
 6. `npm i` in terminal
 7. `npm run start`
